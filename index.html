@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Featured Guide Generator</title>
+
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+	
+		body {
+			padding: 0.5rem;
+		}
+		legend {
+			font-weight: bold;
+			font-size: 1.25rem;
+			padding: 0 0.5rem;
+		}
+		fieldset {
+			border: solid 2px black;
+			padding: 1rem;
+		}
+		label {
+			font-weight: bold;
+		}
+		input {
+			display: block;
+			width: 80%;
+			margin-top: 0.25rem;
+			margin-bottom: 1.25rem;
+			font-size: 1rem;
+		}
+		
+		button#generate {
+			font-weight: bold;
+			font-size: 1rem;
+			padding: 0.5rem 0.75rem;
+		}
+			
+			
+		#example {
+			box-sizing: content-box;
+			width: 210px;
+		}
+		
+		#output-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: stretch;
+			align-content: stretch;
+			align-items: stretch ;
+		}
+
+		#html-container {
+			flex: 1 0 auto;
+			margin-left: 1rem;
+		}
+
+		textarea#html {
+			width: 100%;
+			height: 100%;
+			resize: none;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		.featured-guide-cta {
+			position: relative;
+			display: flex;
+			flex-direction: column-reverse;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+		
+		.featured-guide-img {
+			max-width: min(100%, 230px);
+			width: fit-content;
+		}
+		.featured-guide-img[src=""] {
+			display: none;
+		}
+		
+		.featured-guide-link {
+			padding: 0.25rem 0 0.125rem;
+			margin-bottom: 0.125rem;
+			display: block;
+			text-align: center;
+			font-weight: bold;
+			text-decoration: none;
+			font-size: 1.125rem;
+		}
+		.featured-guide-link:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.featured-guide-cta:focus-within {
+			outline: Highlight auto 5px;
+			outline-offset: 2px;	
+		}
+		.featured-guide-link:focus {
+			outline: none;
+		}
+		.featured-guide-link:hover {
+			text-decoration: underline;
+		}
+		
+	</style>
+
+	<script src="script.js"></script>
+</head>
+<body>
+	
+	<fieldset>
+		<legend>Input</legend>
+		<label for="name">Guide Name</label>
+		<input type="text" id="name">
+		
+		<label for="url">Guide URL</label>
+		<input type="url" id="url">
+		
+		<label for="desc">Guide Description</label>
+		<input type="text" id="desc">
+		
+		<label for="thumbnail">Guide Thumbnail (optional)</label>
+		<div id="thumbnail-desc">
+			This should be the URL for the <a href="https://ask.springshare.com/libguides/faq/829">thumbnail of the guide's homepage</a> that LibGuides can generate.
+		</div>
+		<input type="url" id="thumbnail" aria-describedby="thumbnail-desc">
+		
+		<button id="generate">Generate</button>
+	</fieldset>
+	
+	<fieldset id="output">
+		<legend>Output</legend>
+		<div id="output-container">
+			<div id="example">
+				<div class="featured-guide">
+					<div class="featured-guide-cta">
+						<a class="featured-guide-link" href="">
+					
+						</a>
+						<img class="featured-guide-img" src="">
+					</div>
+				
+					<div class="featured-guide-desc">
+					</div>
+				</div>
+			</div>
+			<div id="html-container">
+				<textarea id="html"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</body>
+</html>
