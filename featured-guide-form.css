@@ -1,0 +1,63 @@
+.fg label {
+	font-weight: bold;
+	font-size: 1.25rem;
+	margin: 1.25rem 0 0;
+}
+.fg label:first-of-type {
+	margin-top: 0;
+}
+
+.fg input {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	border: solid 2px #000;
+	border-radius: 4px;
+}
+
+.fg-error { 
+	color: #a20a3a;
+	font-weight: bold;
+	display: none; 
+}
+.fg input:invalid {
+	border-color: #a20a3a;
+}
+.fg input:invalid + .fg-error {
+	display: block;
+}
+
+.fg button {
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 0.5rem 0.75rem;
+}
+.fg button + button { 
+	margin-left: 1em; 
+}
+.fg-buttons {
+	margin-top: 1.5rem;
+	display: flex;
+}
+.fg-buttons .hfill { 
+	flex: 1 0 auto; 
+}
+.fg button#live:disabled { 
+	display: none;
+}
+
+#fg-form {
+	margin-bottom: 1.5rem;
+}
+
+#fg-form-error-statement {
+  display: none;
+}
+#fg-form:invalid #fg-form-error-statement {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1.25rem;
+  border: solid 3px #a20a3a;
+  font-weight: bold;
+}
