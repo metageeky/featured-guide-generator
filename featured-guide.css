@@ -1,3 +1,7 @@
+.featured-guide.live {
+	padding-top: 5px;
+}
+
 .featured-guide-cta {
 	position: relative;
 	display: flex;
@@ -6,6 +10,7 @@
 	align-items: center;
 	margin: 0 auto;
 	width: fit-content;
+	padding: 0 0.5rem;
 }
 
 .featured-guide-img {
@@ -22,8 +27,7 @@
 	display: block;
 	text-align: center;
 	font-weight: bold;
-	text-decoration: none;
-	font-size: 1.125rem;
+	font-size: 1rem;
 }
 .featured-guide-link:before {
 	content: '';
